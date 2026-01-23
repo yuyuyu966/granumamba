@@ -78,7 +78,7 @@
                     </span> -->
 
                     <!-- SM Link. -->
-                    <span class="link-block">
+                    <!-- <span class="link-block">
                       <a href="static/pdfs/ICASSP2026__Supplementary_Material.pdf" target="_blank"
                       class="external-link button is-normal is-rounded is-dark">
                       <span class="icon">
@@ -86,18 +86,18 @@
                       </span>
                       <span>Supplementary_material</span>
                     </a>
-                  </span>                          
+                  </span>                           -->
 
                             <!-- Github link -->
                             <span class="link-block">
                     <a href="..." target="_blank"
                        class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
+                    <!-- <span class="icon">
                       <i class="fab fa-github"></i>
                     </span>
                     <span>Code coming soon!</span>
                   </a>
-                </span>
+                </span> -->
 
                             <!-- ArXiv abstract Link -->
 <!--                             <span class="link-block">
@@ -126,7 +126,9 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-         Generating high-fidelity co-speech gestures requires modeling complex temporal dynamics, ranging from rapid, fine-grained hand movements to slow, global body shifts. Existing approaches typically operate at a single temporal scale, limiting their ability to capture both local precision and global coherence. We propose GranuMamba, a novel framework that integrates discrete motion priors with multi-scale temporal modeling. First, a GraphConv-VQ-VAE discretizes skeletal motions into a compact codebook of gesture tokens, enhancing semantic richness and structural consistency. Then, two parallel Mamba-based streams are employed to separately encode short-term fine-grained motions and long-term global dynamics. These representations are adaptively fused via a dynamic gating mechanism, enabling context-dependent integration of temporal features. Experiments on the BEAT2 dataset show that GranuMamba outperforms state-of-the-art baselines on both objective metrics and subjective evaluations, producing gestures that are more expressive, coherent, and human-like.
+         Co-speech gesture generation requires modeling heterogeneous temporal dynamics, ranging from rapid, rhythm-sensitive hand articulations to slow, semantically driven global body movements. However, most existing approaches rely on single-scale temporal modeling or continuous motion regression, which often leads to over-smoothed gestures and incurs high computational costs for long-sequence generation.
+We propose GranuMamba, a linear-time framework that integrates discrete motion priors with multi-granularity state space modeling to address these challenges. Specifically, a topology-aware GraphConv-VQ-VAE discretizes skeletal motion into a compact codebook, explicitly preserving structural consistency and high-frequency motion details. Based on this representation, a dual-stream Mamba architecture is designed to separately model short-term rhythmic articulations and long-term global motion trends, which are adaptively fused through a dynamic gated fusion mechanism to enable context-aware temporal integration.
+Extensive experiments on the BEAT2 and TED Emotion datasets demonstrate that GranuMamba consistently outperforms state-of-the-art Transformer- and diffusion-based methods in terms of motion quality, rhythmic alignment, and semantic coherence. Moreover, benefiting from the linear complexity of state space models, GranuMamba achieves faster-than-real-time inference, providing an effective balance between generation fidelity and computational efficiency.
       </div>
     </div>
     <!--/ Abstract. -->
